@@ -1,0 +1,163 @@
+/* Configurações Gerais e Cores Neon */
+:root {
+    --bg-kanban: #0d1117;
+    --bg-column: #161b22;
+    --text-main: #c9d1d9;
+    --border-color: #30363d;
+    --neon-green: #00ff9f;
+    --neon-yellow: #f1e05a;
+    --neon-blue: #58a6ff;
+    --neon-purple: #bc8cff;
+    --postit-yellow: #fff787;
+}
+
+body {
+    background-color: var(--bg-kanban);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Topbar estilizada */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    background: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(0, 255, 159, 0.3);
+}
+
+/* Container do Quadro - Scroll horizontal suave */
+.kanban-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+
+/* Colunas */
+.kanban-column {
+    background-color: var(--bg-column);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 280px;
+    min-width: 280px;
+    padding: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.kanban-column h3 {
+    font-size: 0.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: 1px;
+}
+
+/* Identificação por cores das colunas */
+.kanban-column:nth-child(1) h3 { color: var(--neon-green); border-color: var(--neon-green); }
+.kanban-column:nth-child(2) h3 { color: var(--neon-yellow); border-color: var(--neon-yellow); }
+.kanban-column:nth-child(3) h3 { color: var(--neon-blue); border-color: var(--neon-blue); }
+.kanban-column:nth-child(4) h3 { color: var(--neon-purple); border-color: var(--neon-purple); }
+
+/* --- ESTILO POST-IT --- */
+.kanban-card {
+    background-color: var(--postit-yellow);
+    color: #1a1a1a; /* Texto escuro para contraste no papel */
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 8px 8px 15px rgba(0,0,0,0.4);
+    transform: rotate(-1.5deg); /* Inclinação de post-it */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: grab;
+}
+
+.kanban-card:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.kanban-card:hover {
+    transform: scale(1.08) rotate(0deg);
+    box-shadow: 12px 12px 25px rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+/* Detalhe do Post-it (dobra ou linha) */
+.card-header {
+    font-weight: 900;
+    font-size: 1rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+}
+
+.kanban-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Opcional: Fonte de escrita manual */
+}
+
+/* Imagens dentro do Card */
+.kanban-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    filter: grayscale(20%);
+}
+
+/* Botão de mover (Select) */
+.btn-move {
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-move:hover {
+    background: rgba(0,0,0,0.15);
+}
+
+/* Estilizando a barra de rolagem para combinar com o tema */
+::-webkit-scrollbar {
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-kanban);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-blue);
+}

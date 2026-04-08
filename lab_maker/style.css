@@ -1,0 +1,109 @@
+/* Cores e Variáveis */
+:root {
+    --bg-dark: #0d1117;
+    --bg-card: #161b22;
+    --text-main: #c9d1d9;
+    --neon-green: #00ff9f;
+    --border-color: #30363d;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra Superior */
+.topbar {
+    background-color: var(--bg-card);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    color: var(--neon-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+/* Grid de Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-green);
+}
+
+.card-image {
+    height: 120px;
+    background-size: cover;    /* Faz a imagem preencher todo o espaço */
+    background-position: center; /* Centraliza a foto */
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #30363d;
+}
+.img-agendar{
+    background-image: url('img/trabalho.jpg');
+}
+/* Referenciando as fotos da sua pasta 'img' no VS Code */
+
+.img-solicitar { 
+    background-image: url('img/eletronico.jpg'); 
+}
+
+.img-kanban { 
+    background-image: url('img/laboratorio.jpg'); 
+}
+
+.img-recursos { 
+    background-image: url('img/Microsoft\ 365\ Copilot\ _\ L\'Europe\ dit\ non\ à\ l\'installation\ automatique.jpg'); 
+}
+/* Conteúdo do Card */
+.card-content {
+    padding: 15px;
+    position: relative;
+}
+
+.tag {
+    font-size: 0.65rem;
+    background: rgba(0,0,0,0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #8b949e;
+}
+
+.card-content h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+}
