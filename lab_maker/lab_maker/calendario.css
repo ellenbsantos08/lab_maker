@@ -1,0 +1,101 @@
+/* Layout Geral */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Título e Cabeçalho */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* A GRADE DO CALENDÁRIO */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas iguais */
+    gap: 15px; /* Espaço entre os dias */
+    margin-bottom: 40px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/* Estilo de cada dia (Transformando em Cards) */
+.day {
+    background-color: #eff6ff; /* Azul clarinho de fundo */
+    border: 1px solid #d1d5db;
+    border-radius: 12px; /* Cantos arredondados */
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: 600;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dia 13 (Apenas a borda azul) */
+.day.today {
+    background-color: #ffffff;
+    border: 2px solid #0066cc;
+    color: #000;
+}
+
+/* Dia 15 (Fundo azul preenchido) */
+.day.active {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+}
+
+/* Espaços vazios (Início do mês) */
+.day.empty {
+    background: transparent;
+    border: none;
+}
+
+/* FORMULÁRIO DE RESERVA */
+.reserva-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.reserva-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se o monitor for pequeno */
+    gap: 10px;
+    align-items: center;
+}
+
+.reserva-form input, 
+.reserva-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1; /* Faz os inputs crescerem igualmente */
+    min-width: 150px;
+}
+
+/* Botão Agendar (No canto direito) */
+.btn-agendar {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto; /* Joga o botão para a direita */
+}
+
+.btn-agendar:hover {
+    background-color: #004a99;
+}

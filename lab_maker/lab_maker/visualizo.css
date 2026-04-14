@@ -1,0 +1,89 @@
+/* ===== FUNDO ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+}
+
+/* ===== TOPO ===== */
+.topbar {
+    background: #2563eb;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ===== TÍTULO ===== */
+h2 {
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #2563eb;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== TEXTO ===== */
+.card h3 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.card p {
+    margin-top: 8px;
+    color: #475569;
+}
+
+/* ===== BOTÃO EXCLUIR ===== */
+.card a {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #dc2626;
+}
+
+/* ===== MENSAGEM VAZIA ===== */
+.vazio {
+    text-align: center;
+    color: #64748b;
+    margin-top: 30px;
+}
