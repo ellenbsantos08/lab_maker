@@ -1,0 +1,167 @@
+/* ===== TEMA AZUL E BRANCO ===== */
+
+:root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --text: #ffffff;
+    --muted: #c9d1d9;
+    --border: #30363d;
+    --blue: #58a6ff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== CALENDÁRIO ===== */
+
+#calendar-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: var(--panel);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fc-toolbar-title {
+    color: var(--blue) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fc-button-primary {
+    background-color: var(--panel) !important;
+    border: 1px solid var(--border) !important;
+    color: white !important;
+    transition: 0.3s;
+}
+
+.fc-button-primary:hover {
+    background-color: var(--blue) !important;
+    color: #0d1117 !important;
+}
+
+.fc-daygrid-day-number {
+    color: var(--muted) !important;
+    text-decoration: none !important;
+    padding: 8px !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: var(--blue) !important;
+    text-decoration: none !important;
+}
+
+.fc-event {
+    border: none !important;
+    padding: 2px 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    background: var(--blue) !important;
+    color: #0d1117 !important;
+}
+
+/* ===== TOPBAR ===== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--blue);
+}
+
+/* ===== KANBAN ===== */
+
+.kanban-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+
+.kanban-column {
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 280px;
+    min-width: 280px;
+    padding: 15px;
+}
+
+.kanban-column h3 {
+    color: var(--blue);
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 10px;
+}
+
+/* ===== CARDS ===== */
+
+.kanban-card {
+    background-color: #ffffff;
+    color: #0d1117;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+    transform: rotate(-1deg);
+    transition: 0.3s;
+}
+
+.kanban-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.kanban-card:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.card-header {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.kanban-card p {
+    font-size: 0.9rem;
+}
+
+/* ===== SCROLL ===== */
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue);
+}

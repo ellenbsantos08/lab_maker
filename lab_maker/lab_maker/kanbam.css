@@ -1,0 +1,108 @@
+/* ===== FUNDO ===== */
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #f1f5f9, #e0ecff);
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== BOARD ===== */
+.kanban-board {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== COLUNAS ===== */
+.coluna {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    min-height: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.coluna h3 {
+    text-align: center;
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 5px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    cursor: grab;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}/* ===== BOTÃO VOLTAR ===== */
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+
+}
+/* ===== BOTÃO NOVA TAREFA ===== */
+.btn-nova {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-nova:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* ===== BOTÃO EXCLUIR ===== */
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.btn-voltar {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
